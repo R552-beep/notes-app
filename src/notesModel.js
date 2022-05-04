@@ -1,6 +1,8 @@
-class notesModel {
+class NotesModel {
+
   constructor() {
     this.notes = [];
+    
   }
 
   getNotes() {
@@ -16,4 +18,4 @@ class notesModel {
   }
 }
 
-module.exports = notesModel;
+module.exports = NotesModel;

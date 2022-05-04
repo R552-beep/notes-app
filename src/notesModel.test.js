@@ -1,7 +1,7 @@
-const notesModel = require('./notesModel');
+const NotesModel = require('./notesModel');
 
 describe("notesModel", () => {
-  const model = new notesModel();
+  const model = new NotesModel();
 
   it("getNotes initially returns an empty array", () => {
     expect(model.getNotes()).toEqual([]);
