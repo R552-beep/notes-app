@@ -1,7 +1,6 @@
 {
   "name": "notes-app",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +14,14 @@
   },
   "devDependencies": {
     "jest-environment-jsdom": "^28.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R552-beep/notes-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/R552-beep/notes-app/issues"
+  },
+  "homepage": "https://github.com/R552-beep/notes-app#readme",
+  "description": ""
 }

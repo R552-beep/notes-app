@@ -9,7 +9,8 @@
  
  describe('Notes view', () => {
    it('displays two notes', () => {
-     document.body.innerHTML = fs.readFileSync('./index.html');
+     
+    document.body.innerHTML = fs.readFileSync('./index.html');
  
      
      const model = new NotesModel();
@@ -39,6 +40,24 @@
     expect(document.querySelectorAll('div.note').length).toEqual(1);
     expect(document.querySelectorAll('div.note')[0].innerText).toEqual('this is a test message');
    });
+
+   it('clears the list of previous notes before displaying', () => {
+     
+    document.body.innerHTML = fs.readFileSync('./index.html');
+
+     const model = new NotesModel();
+     const view = new NotesView(model);
+     model.addNote('A first note');
+     model.addNote('Another one');
+
+     model.addNote('hello');
+
+     view.displayNotes();
+     view.displayNotes();
+
+     expect(document.querySelectorAll('div.note').length).toEqual(3);
+   });
+
 
  });
 
